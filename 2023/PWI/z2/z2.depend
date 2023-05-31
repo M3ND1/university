@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1680168597 source:c:\users\mendi\source\repos\cpp\2023\pwi\z2\main.cpp
+	<iostream>
+	<chrono>
+	<ctime>
+

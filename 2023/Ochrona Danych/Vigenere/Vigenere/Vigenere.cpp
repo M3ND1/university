@@ -32,17 +32,22 @@ std::string vigenere(const std::string &input, const std::vector<std::vector<std
             if (operacja == true)
             {
                 int row = alphabet.find(input_char);
-                output_string += matrix[col][row];
+                output_string += matrix[row][col];
             }
             else {
-                for (int j = 0; j < alphabet.length(); j++)
+                bool found = false;
+                for(int row = 0; row < alphabet.length(); row++)
                 {
-                    if (matrix[j][col][0] == input_char)
+                    if (matrix[row][col][0] == input_char)
                     {
-                        char searched = matrix[j][0][0];
-                        output_string += searched;
+                        output_string += alphabet[row];
+                        found = true;
                         break;
                     }
+                }
+                if (!found) {
+                    std::cerr << "Error: character not found in Vigenere matrix\n";
+                    output_string += input_char;
                 }
             }
         }
