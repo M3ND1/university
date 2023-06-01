@@ -1,4 +1,0 @@
-1. przyjmować po jednym znaku (dane z COMa)
-2. podzielić data_in na rozkazy (rozdzielność znakiem windowsowego entera)
-3. zlokować wątki mutexem -> rozwiązać problem dwóch wątków dostających się w tym samym momencie do jednego wektora stringow (data_in)
-4. kolejka rozkazów
